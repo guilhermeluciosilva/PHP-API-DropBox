@@ -4,8 +4,7 @@ use Kunnu\Dropbox\Dropbox;
 use Kunnu\Dropbox\DropboxApp;
 
 $dropboxKey = "keyexemplo";
-$dropboxSecret = "Secretexemplo
-";
+$dropboxSecret = "Secretexemplo";
 $dropboxToken = "Tokenexemplo";
 
 $app = new DropboxApp($dropboxKey, $dropboxSecret, $dropboxToken);
@@ -13,7 +12,7 @@ $dropbox = new Dropbox($app);
 
 if(!empty($_FILES)){
     $nombre = uniqid();
-    $temfile = $_FILES['file']['tmp_name'];
+    $tempfile = $_FILES['file']['tmp_name'];
     $ext = explode(".",$_FILES['file']['name']);
     $ext = end($ext);
     $nombredropbox = "/".$nombre.".".$ext;
